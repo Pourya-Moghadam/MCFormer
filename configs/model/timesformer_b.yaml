@@ -1,0 +1,17 @@
+{
+  "model": {
+    "name": "timesformer_base_divided_space_time",
+    "initialization": "official_timesformer_base_imagenet1k",
+    "attention_type": "divided_space_time",
+    "patch_size": 16,
+    "embed_dim": 768,
+    "depth": 12,
+    "num_heads": 12,
+    "mlp_ratio": 4.0,
+    "dropout": 0.0,
+    "attention_dropout": 0.0,
+    "stochastic_depth": 0.1,
+    "pooling": "classification_token",
+    "mcim": {"enabled": false}
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "model_seeds": [17, 29, 43],
+  "analysis_seed": 2026,
+  "experiments": {
+    "E06": [
+      {"name": "baseline", "config": "../experiment/e01_toyota_cs_baseline.yaml", "overrides": []},
+      {"name": "spatial_only", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["model.auxiliary_heads=[{\"name\":\"spatial\",\"target\":\"spatial\",\"kind\":\"temporal\",\"weight\":1.0}]" ]},
+      {"name": "temporal_ungated", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["model.auxiliary_heads=[{\"name\":\"temporal\",\"target\":\"temporal_ungated\",\"kind\":\"temporal\",\"weight\":1.0}]" ]},
+      {"name": "gated_mcim", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": []},
+      {"name": "spatial_plus_temporal", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["model.auxiliary_heads=[{\"name\":\"temporal\",\"target\":\"temporal_gated\",\"kind\":\"temporal\",\"weight\":1.0},{\"name\":\"spatial\",\"target\":\"spatial\",\"kind\":\"temporal\",\"weight\":1.0}]" ]}
+    ],
+    "E07": [
+      {"name": "lambda_0.1", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["training.coupling_weight=0.1"]},
+      {"name": "lambda_0.5", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["training.coupling_weight=0.5"]},
+      {"name": "lambda_1.0", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["training.coupling_weight=1.0"]},
+      {"name": "lambda_2.0", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["training.coupling_weight=2.0"]}
+    ],
+    "E08": [
+      {"name": "stage_1", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["model.mcim.insertion_stage=1"]},
+      {"name": "stage_3", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["model.mcim.insertion_stage=3"]},
+      {"name": "stage_4", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["model.mcim.insertion_stage=4"]}
+    ],
+    "E09": [
+      {"name": "timesformer_baseline", "config": "../experiment/e09_toyota_cs_timesformer.yaml", "overrides": []},
+      {"name": "timesformer_mcim", "config": "../experiment/e09_toyota_cs_timesformer.yaml", "overrides": ["model.mcim.enabled=true"]},
+      {"name": "video_swin_baseline", "config": "../experiment/e01_toyota_cs_baseline.yaml", "overrides": []},
+      {"name": "video_swin_mcim", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": []},
+      {"name": "mvitv2_baseline", "config": "../experiment/e09_toyota_cs_mvitv2.yaml", "overrides": []},
+      {"name": "mvitv2_mcim", "config": "../experiment/e09_toyota_cs_mvitv2.yaml", "overrides": ["model.mcim.enabled=true"]}
+    ],
+    "E10": [
+      {"name": "baseline", "config": "../experiment/e01_toyota_cs_baseline.yaml", "overrides": []},
+      {"name": "spatial_alignment", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["model.auxiliary_heads=[{\"name\":\"spatial\",\"target\":\"spatial\",\"kind\":\"temporal\",\"weight\":1.0}]" ]},
+      {"name": "feature_hallucination", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["model.auxiliary_heads=[{\"name\":\"hallucination\",\"target\":\"hallucination\",\"kind\":\"vector\",\"output_dim\":256,\"weight\":1.0}]" ]},
+      {"name": "mcim", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": []}
+    ],
+    "E11": [
+      {"name": "tau_0.10", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["auxiliary.distance_threshold=0.10"]},
+      {"name": "tau_0.15", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["auxiliary.distance_threshold=0.15"]},
+      {"name": "tau_0.20", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["auxiliary.distance_threshold=0.20"]},
+      {"name": "sigma_0", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["auxiliary.gaussian_sigma_frames=0.0"]},
+      {"name": "sigma_1", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["auxiliary.gaussian_sigma_frames=1.0"]},
+      {"name": "sigma_2", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["auxiliary.gaussian_sigma_frames=2.0"]},
+      {"name": "detector_confidence_0.15", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["auxiliary.detector_confidence=0.15"]},
+      {"name": "detector_confidence_0.25", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["auxiliary.detector_confidence=0.25"]},
+      {"name": "detector_confidence_0.40", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["auxiliary.detector_confidence=0.40"]},
+      {"name": "tracker_match_0.70", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["auxiliary.tracker_match_threshold=0.70"]},
+      {"name": "tracker_match_0.80", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["auxiliary.tracker_match_threshold=0.80"]},
+      {"name": "tracker_match_0.90", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["auxiliary.tracker_match_threshold=0.90"]},
+      {"name": "coverage_0.30", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["auxiliary.minimum_track_coverage=0.30"]},
+      {"name": "coverage_0.50", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["auxiliary.minimum_track_coverage=0.50"]},
+      {"name": "coverage_0.70", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": ["auxiliary.minimum_track_coverage=0.70"]}
+    ],
+    "E12": [
+      {"name": "uncorrupted", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": [], "cache": null},
+      {"name": "wrist_noise_0.02", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": [], "cache": {"corruption": "wrist_noise", "value": 0.02}},
+      {"name": "wrist_noise_0.05", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": [], "cache": {"corruption": "wrist_noise", "value": 0.05}},
+      {"name": "missed_detections_0.10", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": [], "cache": {"corruption": "missed_detections", "value": 0.10}},
+      {"name": "missed_detections_0.20", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": [], "cache": {"corruption": "missed_detections", "value": 0.20}},
+      {"name": "object_occlusion_4", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": [], "cache": {"corruption": "object_occlusion", "value": 4}},
+      {"name": "track_swap_0.10", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": [], "cache": {"corruption": "track_swap", "value": 0.10}},
+      {"name": "track_swap_0.20", "config": "../experiment/e01_toyota_cs_mcformer.yaml", "overrides": [], "cache": {"corruption": "track_swap", "value": 0.20}}
+    ]
+  }
+}

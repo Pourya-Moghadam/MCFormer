@@ -1,0 +1,12 @@
+{
+  "defaults": [
+    "../base/default.yaml",
+    "../dataset/ntu120.yaml",
+    "../model/mcformer_video_swin_t.yaml"
+  ],
+  "experiment": {
+    "id": "E01",
+    "name": "ntu120_cs_mcformer_2d",
+    "paper_targets": ["tab:ntu120_sota", "tab:statistics"]
+  }
+}

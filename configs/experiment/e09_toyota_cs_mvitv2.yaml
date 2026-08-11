@@ -1,0 +1,12 @@
+{
+  "defaults": [
+    "../base/default.yaml",
+    "../dataset/toyota.yaml",
+    "../model/mvitv2_s.yaml"
+  ],
+  "experiment": {
+    "id": "E09",
+    "name": "toyota_cs_mvitv2_small",
+    "paper_targets": ["tab:backbones"]
+  }
+}

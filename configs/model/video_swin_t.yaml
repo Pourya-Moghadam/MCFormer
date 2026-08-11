@@ -1,0 +1,19 @@
+{
+  "model": {
+    "name": "video_swin_t",
+    "initialization": "official_swin_tiny_patch4_window7_224_imagenet1k",
+    "patch_size": [2, 4, 4],
+    "window_size": [8, 7, 7],
+    "embed_dim": 96,
+    "depths": [2, 2, 6, 2],
+    "num_heads": [3, 6, 12, 24],
+    "mlp_ratio": 4.0,
+    "qkv_bias": true,
+    "dropout": 0.0,
+    "attention_dropout": 0.0,
+    "stochastic_depth": 0.2,
+    "pooling": "global_average",
+    "classifier_init_std": 0.02,
+    "mcim": {"enabled": false}
+  }
+}

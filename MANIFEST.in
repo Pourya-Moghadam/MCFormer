@@ -1,0 +1,16 @@
+include LICENSE
+include README.md
+include CITATION.cff
+include CONTRIBUTING.md
+include MODEL_CARD.md
+include PAPER_EXPERIMENTS.md
+include PUBLISHING.md
+include REPRODUCIBILITY_SPEC.md
+include SECURITY.md
+include Makefile
+include environment.yml
+recursive-include configs *.json *.md *.yaml
+recursive-include metadata *.json *.md
+recursive-include requirements *.txt
+recursive-include scripts *.py
+prune outputs
