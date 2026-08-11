@@ -1,0 +1,10 @@
+{
+  "data": {
+    "dataset": "ntu_rgbd_60",
+    "root": null,
+    "manifest": "metadata/manifests/ntu60.jsonl",
+    "protocol": "cs"
+  },
+  "model": {"num_classes": 60},
+  "evaluation": {"primary_metric": "top1_accuracy"}
+}

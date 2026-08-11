@@ -1,0 +1,12 @@
+{
+  "defaults": [
+    "../base/default.yaml",
+    "../dataset/toyota.yaml",
+    "../model/video_swin_t.yaml"
+  ],
+  "experiment": {
+    "id": "E01",
+    "name": "toyota_cs_video_swin_baseline",
+    "paper_targets": ["tab:toyota_sota", "tab:statistics"]
+  }
+}

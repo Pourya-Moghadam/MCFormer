@@ -1,0 +1,9 @@
+{
+  "model": {
+    "name": "mvitv2_small",
+    "initialization": "official_mvitv2_small_imagenet1k",
+    "variant": "small",
+    "pooling": "classification_token",
+    "mcim": {"enabled": false}
+  }
+}

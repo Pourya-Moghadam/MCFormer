@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "project": {
+    "name": "mc-former",
+    "output_root": "outputs",
+    "device": "auto"
+  },
+  "reproducibility": {
+    "seeds": [17, 29, 43],
+    "deterministic": true,
+    "validation_split_seed": 2026,
+    "analysis_seed": 2026
+  },
+  "data": {
+    "dataset": null,
+    "root": null,
+    "manifest": null,
+    "protocol": null,
+    "validation_fraction": 0.10,
+    "num_frames": 32,
+    "temporal_stride": 2,
+    "input_size": 224,
+    "resize_short_side": 256,
+    "train_crop_scale": [0.8, 1.0],
+    "train_crop_ratio": [0.75, 1.3333333333333333],
+    "horizontal_flip_probability": 0.5,
+    "evaluation_views": 1,
+    "imagenet_mean": [0.485, 0.456, 0.406],
+    "imagenet_std": [0.229, 0.224, 0.225]
+  },
+  "model": {
+    "name": null,
+    "num_classes": null,
+    "mcim": {
+      "enabled": false,
+      "insertion_stage": 4,
+      "hidden_ratio": 0.5,
+      "activation": "relu",
+      "temporal_alignment": "linear_interpolation"
+    }
+  },
+  "training": {
+    "epochs": 50,
+    "batch_size": 16,
+    "per_device_batch_size": 4,
+    "num_workers": 4,
+    "pin_memory": true,
+    "optimizer": "adamw",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.05,
+    "adam_betas": [0.9, 0.999],
+    "adam_epsilon": 1.0e-8,
+    "warmup_epochs": 5,
+    "schedule": "cosine",
+    "minimum_learning_rate": 0.0,
+    "gradient_clip_norm": 5.0,
+    "mixed_precision": "fp16",
+    "amp_loss_scaling": "dynamic",
+    "distributed_loss_reduction": "global_valid_positions",
+    "gradient_accumulation_policy": "preserve_global_batch_16",
+    "learning_rate_scaling": "none",
+    "early_stopping": false,
+    "label_smoothing": 0.0,
+    "classification_loss": "cross_entropy",
+    "coupling_loss": "masked_mse",
+    "coupling_weight": 1.0
+  },
+  "analysis": {
+    "bootstrap_resamples": 10000,
+    "confidence_interval": "percentile_95",
+    "standard_deviation_ddof": 1,
+    "spatial_target_weight": 1.0,
+    "temporal_target_weight": 1.0,
+    "corruption_stage": "before_interpolation_and_smoothing"
+  },
+  "auxiliary": {
+    "pose_source": "hrnet_w48_coco_wholebody_384x288",
+    "pose_confidence": 0.30,
+    "pose_max_gap": 5,
+    "gaussian_sigma_frames": 1.0,
+    "detector": "yolov8x_coco",
+    "detector_confidence": 0.25,
+    "detector_nms_iou": 0.70,
+    "exclude_classes": ["person"],
+    "tracker": "bytetrack",
+    "tracker_high_threshold": 0.50,
+    "tracker_low_threshold": 0.10,
+    "tracker_match_threshold": 0.80,
+    "tracker_buffer_frames": 30,
+    "tracking_cadence": "native_frames",
+    "preprocessing_mode": "native_frames",
+    "object_max_gap": 3,
+    "minimum_track_coverage": 0.50,
+    "minimum_track_mean_confidence": 0.25,
+    "distance_threshold": 0.15,
+    "epsilon": 1e-6
+  },
+  "logging": {
+    "level": "INFO",
+    "json_lines": true,
+    "log_every_steps": 20
+  }
+}

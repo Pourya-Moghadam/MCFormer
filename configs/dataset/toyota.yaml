@@ -1,0 +1,10 @@
+{
+  "data": {
+    "dataset": "toyota_smarthome",
+    "root": null,
+    "manifest": "metadata/manifests/toyota.jsonl",
+    "protocol": "cs"
+  },
+  "model": {"num_classes": 31},
+  "evaluation": {"primary_metric": "mean_class_accuracy"}
+}

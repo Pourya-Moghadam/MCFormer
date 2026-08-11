@@ -1,0 +1,4 @@
+-r preprocessing.txt
+mmcv==2.1.0
+mmengine==0.10.5
+mmpose==1.3.2

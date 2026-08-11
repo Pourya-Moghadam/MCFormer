@@ -1,0 +1,30 @@
+{
+  "manipulation_actions": [
+    "Cook – Cut",
+    "Cook – Stir",
+    "Cook – Use stove",
+    "Cut bread",
+    "Drink – From bottle",
+    "Drink – From can",
+    "Drink – From cup",
+    "Drink – From glass",
+    "Make coffee – Pour grains",
+    "Make coffee – Pour water",
+    "Make tea – Boil water",
+    "Make tea – Insert tea bag",
+    "Pour – From bottle",
+    "Pour – From can",
+    "Pour – From kettle",
+    "Take pills",
+    "Use laptop"
+  ],
+  "same_object_pair_1": ["Drink – From bottle", "Pour – From bottle"],
+  "same_object_pair_2": ["Cut bread", "Move – Knife"],
+  "same_object_pair_3": ["Brush – Teeth", "Touch – Face"],
+  "confusion_matrix_actions": [
+    "Drink – From bottle",
+    "Pour – From bottle",
+    "Cut bread",
+    "Move – Knife"
+  ]
+}

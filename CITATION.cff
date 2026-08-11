@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the MC-Former manuscript."
+title: "MC-Former: Interaction-Aware Action Recognition via Hand-Object Motion Coupling"
+type: software
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/Pourya-Moghadam74/MC-Former"
+url: "https://github.com/Pourya-Moghadam74/MC-Former"
+authors:
+  - family-names: Moghadam
+    given-names: Pourya
+    email: Pourya.Moghadam@utoronto.ca
+  - family-names: Roshan Fekr
+    given-names: Atena
+abstract: >-
+  Reproducible research implementation for RGB video action recognition with
+  training-time hand-object motion-coupling supervision.

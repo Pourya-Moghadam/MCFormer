@@ -1,0 +1,12 @@
+{
+  "defaults": [
+    "../base/default.yaml",
+    "../dataset/toyota.yaml",
+    "../model/mcformer_video_swin_t.yaml"
+  ],
+  "experiment": {
+    "id": "E01",
+    "name": "toyota_cs_mcformer_2d",
+    "paper_targets": ["tab:toyota_sota", "tab:statistics"]
+  }
+}

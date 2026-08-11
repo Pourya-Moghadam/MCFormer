@@ -1,0 +1,12 @@
+{
+  "defaults": [
+    "../base/default.yaml",
+    "../dataset/toyota.yaml",
+    "../model/timesformer_b.yaml"
+  ],
+  "experiment": {
+    "id": "E09",
+    "name": "toyota_cs_timesformer",
+    "paper_targets": ["tab:backbones"]
+  }
+}
