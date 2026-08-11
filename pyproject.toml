@@ -43,7 +43,7 @@ preprocessing = [
 ]
 analysis = [
   "matplotlib==3.9.2",
-  "pandas==2.2.3",
+  "pandas==3.0.5",
   "scikit-learn==1.5.2",
 ]
 pose = [
