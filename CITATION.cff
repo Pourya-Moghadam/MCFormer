@@ -4,8 +4,8 @@ title: "MC-Former: Interaction-Aware Action Recognition via Hand-Object Motion C
 type: software
 version: 0.1.0
 license: MIT
-repository-code: "https://github.com/Pourya-Moghadam/MC-Former"
-url: "https://github.com/Pourya-Moghadam/MC-Former"
+repository-code: "https://github.com/Pourya-Moghadam/MCFormer"
+url: "https://github.com/Pourya-Moghadam/MCFormer"
 authors:
   - family-names: Moghadam
     given-names: Pourya

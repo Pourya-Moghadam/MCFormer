@@ -4,7 +4,6 @@ include CITATION.cff
 include CONTRIBUTING.md
 include MODEL_CARD.md
 include PAPER_EXPERIMENTS.md
-include PUBLISHING.md
 include REPRODUCIBILITY_SPEC.md
 include SECURITY.md
 include Makefile

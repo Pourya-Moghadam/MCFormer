@@ -1,6 +1,6 @@
 # MC-Former
 
-[![CI](https://github.com/Pourya-Moghadam/MC-Former/actions/workflows/ci.yml/badge.svg)](https://github.com/Pourya-Moghadam/MC-Former/actions/workflows/ci.yml)
+[![CI](https://github.com/Pourya-Moghadam/MCFormer/actions/workflows/ci.yml/badge.svg)](https://github.com/Pourya-Moghadam/MCFormer/actions/workflows/ci.yml)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-31110/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
@@ -431,5 +431,4 @@ PYTHONPATH=src python -m mcformer.cli.show_config \
 The code is released under the [MIT License](LICENSE). Dataset and model-weight terms remain those
 of their respective providers. Citation metadata is in [`CITATION.cff`](CITATION.cff). See the
 intended uses and limitations in [`MODEL_CARD.md`](MODEL_CARD.md), contribution guidance in
-[`CONTRIBUTING.md`](CONTRIBUTING.md), and public-release procedure in
-[`PUBLISHING.md`](PUBLISHING.md).
+[`CONTRIBUTING.md`](CONTRIBUTING.md).
